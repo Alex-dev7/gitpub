@@ -6,13 +6,14 @@ const app = express()
 
 const PORT = process.env.PORT 
 
-
+//creating home page route
 app.get('/', (req, res) => {
     res.send('Welcome to the Gitpub App!')
 })
 
+//creating a new route for the drinks
 app.get('/drinks', (req, res) => {
-    res.send(drinks)
+    res.render('drinks_index.ejs')
 })
 
 app.listen(PORT, () => {

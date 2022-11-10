@@ -1,3 +1,4 @@
+//this array acts as a database for now
 const drinks = [
     {
       name: 'cruddy mary',
@@ -41,5 +42,6 @@ const drinks = [
     }
   ]
 
+  //exporting the drinks array
   module.exports = drinks;
   
