@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    background-color: rgb(51, 49, 49);
+    color: rgb(230, 226, 226)
+}
+a {
+    color: rgb(226, 205, 45);
+}
+
+#button {
+    width: 5rem;
+    border: 2px solid black;
+    text-align: center;
+    text-decoration-line: none;
+    color: white;
+    background-color: rgb(162, 162, 44);
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+}

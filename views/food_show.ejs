@@ -3,8 +3,8 @@
 <%- include('./partials/head.ejs') %>
 <body>
  
-    <h1>At foo bar</h1>
-    <h2><%= drinks.name %></h2>
+    <h1>At foo Kitchen</h1>
+    <h2><%= food.name %></h2>
      <% 
      //this function will update the image url
         function updateToPng(url){
@@ -13,10 +13,10 @@
 
         }
     %>
-    <img src="<%= updateToPng(drinks.image)%>" alt="">
+    <img src="<%= updateToPng(food.image)%>" alt="">
    
-    <h3>$ <%= drinks.price %></h3>
-    <a href="/drinks" id="button">Back</a>
+    <h3>$ <%= food.price %></h3>
+    <a href="/food" id="button">Back</a>
 
 </body>
 </html>

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <%- include("./partials/head.ejs") %>
+
 <body>
  
-    <h1>Welcome to gitPub</h1>
+    <h1>Welcome to gitEat</h1>
 
-    <!-- name of each drink as a list item inside an unordered list -->
+    <!-- name of each dish as a list item inside an unordered list -->
     <ul>
-        <% for(let i = 0; i < drinks.length; i += 1 ) { %>
-            <% const words = drinks[i].name.split(" ")
+        <% for(let i = 0; i < food.length; i += 1 ) { %>
+            <% const words = food[i].name.split(" ")
             // console.log(words)
             //iterating over the words array and uppercasing the first letter of each word
                for (let i = 0; i < words.length; i++) {
@@ -16,11 +18,11 @@
               words[i] = words[i][0].toUpperCase() + words[i].substring(1)
             }%>
 
-            <li><a href="/drinks/<%=i %>"><%=words.join(" ") %></a></li>
+            <li><a href="/food/<%=i %>"><%=words.join(" ") %></a></li>
 
         <% } %>
 
     </ul>
+
 </body>
 </html>
-
