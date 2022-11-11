@@ -18,6 +18,11 @@ app.get('/drinks', (req, res) => {
     })
 })
 
+//setting up show route
+app.get('/drinks/:id', (req, res) => {
+    res.send(req.params.id)
+})
+
 app.listen(PORT, () => {
     console.log('Server listening on port ' + PORT)
 })
