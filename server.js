@@ -20,7 +20,9 @@ app.get('/drinks', (req, res) => {
 
 //setting up show route
 app.get('/drinks/:id', (req, res) => {
-    res.send(req.params.id)
+    res.render('drinks_show.ejs', {
+        drinks: drinks[req.params.id]
+    })
 })
 
 

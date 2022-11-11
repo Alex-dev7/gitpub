@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include("./partials/head.ejs") %>
 <body>
  
     <h1>Welcome to gitPub</h1>
@@ -13,7 +8,7 @@
     <!-- name of each drink as a list item inside an unordered list -->
     <ul>
         <% for(let i = 0; i < drinks.length; i += 1 ) { %>
-            <% const words = drinks[i].name.split(' ')
+            <% const words = drinks[i].name.split(" ")
             // console.log(words)
             //iterating over the words array and uppercasing the first letter of each word
                for (let i = 0; i < words.length; i++) {
@@ -21,7 +16,7 @@
               words[i] = words[i][0].toUpperCase() + words[i].substring(1)
             }%>
 
-            <li><a href="/drinks/<%=i %>"><%=words %></a></li>
+            <li><a href="/drinks/<%=i %>"><%=words.join(" ") %></a></li>
 
         <% } %>
 
@@ -29,8 +24,17 @@
 
     <style type="text/css">
         body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 2.5rem;
+            font-size: 1.5rem;
             background-color: rgb(51, 49, 49);
             color: rgb(230, 226, 226)
+        }
+        a {
+            color: rgb(226, 205, 45);
         }
     </style>
 </body>
