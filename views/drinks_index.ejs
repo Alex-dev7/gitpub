@@ -10,6 +10,25 @@
  
     <h1>Welcome to gitPub</h1>
 
+    <!-- name of each drink as a list item inside an unordered list -->
+    <ul>
+        <% for(let i = 0; i < drinks.length; i += 1 ) { %>
+            <% const words = drinks[i].name.split(' ')
+            console.log(words)
+            //iterating over the words array and uppercasing the first letter of each word
+               for (let i = 0; i < words.length; i++) {
+                //using substring method to append the rest of the word back startind at 1, 0 being the uppercased letter
+              words[i] = words[i][0].toUpperCase() + words[i].substring(1)
+            }
+         
+                
+                %>
+
+            <li><%=words.join(" ") %></li>
+
+        <% } %>
+    </ul>
+
     <style type="text/css">
         body {
             background-color: rgb(51, 49, 49);
